@@ -32,6 +32,15 @@ The training and testing scripts expect each dataset split to contain aligned RG
 
 Images are matched by filename. The scripts currently use `RGB/`, `T/`, and `GT/` subdirectories for both training and testing data.
 
+### Datasets
+
+- Dataset 1: [Download](DATASET_1_LINK)
+- Dataset 2: [Download](DATASET_2_LINK)
+
+### Benchmark
+
+- [Download the benchmark](BENCHMARK_LINK)
+
 ## Usage
 
 The scripts use PyTorch and expect a CUDA-capable GPU. Install PyTorch and the other required Python packages in your environment before running them.
@@ -51,6 +60,11 @@ Optional arguments include `--epoch`, `--lr`, `--batchsize`, `--trainsize`, `--r
 
 ### Generate saliency maps
 
+Download our ResNet-based model weights:
+
+- Dataset 1: [Download weights](DATASET_1_WEIGHTS_LINK)
+- Dataset 2: [Download weights](DATASET_2_WEIGHTS_LINK)
+
 ```bash
 python test.py \
   --test_dataset_path /path/to/dataset/test \
@@ -62,6 +76,11 @@ python test.py \
 ### Evaluate
 
 `eval.py` computes S-measure, E-measure, F-measure, weighted F-measure, and MAE. Before running it, set the ground-truth directory and prediction directory in the script to match your local paths.
+
+Our saliency maps are available here:
+
+- Dataset 1: [Download saliency maps](DATASET_1_SALIENCY_MAPS_LINK)
+- Dataset 2: [Download saliency maps](DATASET_2_SALIENCY_MAPS_LINK)
 
 ## Citation
 
