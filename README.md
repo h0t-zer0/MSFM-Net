@@ -1,6 +1,6 @@
 # Mamba-based Spatial-Frequency Modeling for RGB-IR Camouflaged Object Detection
 
-This repository accompanies our work on RGB-IR camouflaged object detection. The method uses Mamba-based spatial-frequency modeling to combine visible and infrared information for camouflaged object localization.
+This repository accompanies our work on RGB-IR camouflaged object detection. The method uses Mamba-based spatial-frequency modeling to combine visible and infrared information for camouflaged object detection.
 
 ## Project status
 
@@ -17,7 +17,7 @@ We plan to release the benchmark, along with ResNet-based model weights and sali
 - `test.py`: saliency map inference script.
 - `eval.py`: saliency map evaluation script.
 - `mssim.py`: structural similarity loss implementation.
-- `flops.py`: model complexity utility.
+
 
 ## Data organization
 
@@ -34,12 +34,12 @@ Images are matched by filename. The scripts currently use `RGB/`, `T/`, and `GT/
 
 ### Datasets
 
-- Dataset 1: [Download](DATASET_1_LINK)
-- Dataset 2: [Download](DATASET_2_LINK)
+- TVCO1K: [Download](DATASET_1_LINK)
+- EVIAC: [Download](DATASET_2_LINK)
 
 ### Benchmark
 
-- [Download the benchmark](BENCHMARK_LINK)
+- [Download the benchmark]([BENCHMARK_LINK](https://drive.google.com/file/d/12pVGwz9lhpWOYo7bvIQ8YOkQQUNKhirT/view?usp=drive_link))
 
 ## Usage
 
