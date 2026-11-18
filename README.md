@@ -34,8 +34,8 @@ Images are matched by filename. The scripts currently use `RGB/`, `T/`, and `GT/
 
 ### Datasets
 
-- TVCO1K: [Download](DATASET_1_LINK)
-- EVIAC: [Download](DATASET_2_LINK)
+- TVCO1K: [Download](https://drive.google.com/file/d/1zFClM5N4pph71UzGwRMQX1OcXs6ctb_s/view?usp=drive_link)
+- EVIAC: [Download](https://drive.google.com/file/d/1jGN2QihMTbbk5GK1eAJk7jo77qk0XPBO/view?usp=drive_link)
 
 ### Benchmark
 
