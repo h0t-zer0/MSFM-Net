@@ -1,4 +1,72 @@
-# MSFM-Net
-Mamba-based Spatial-Frequency Modeling for RGB-IR Camouflaged Object Detection
+# Mamba-based Spatial-Frequency Modeling for RGB-IR Camouflaged Object Detection
 
-This work is also associated with a pending patent application, and the source code and corresponding experimental results cannot be made publicly available before the patent application is filed. To protect the intellectual property associated with this work, we will release the complete code and experimental results on this GitHub repository after the associated patent application has been filed, which is expected to take place within the next 1-2 months.
+This repository accompanies our work on RGB-IR camouflaged object detection. The method uses Mamba-based spatial-frequency modeling to combine visible and infrared information for camouflaged object localization.
+
+## Project status
+
+This work is associated with a pending patent application. To protect the intellectual property related to this work, the complete source code and corresponding experimental results will be made publicly available in this repository after the patent application has been filed. Filing is currently expected within the next 1–2 months.
+
+We plan to release the benchmark, along with ResNet-based model weights and saliency maps for two datasets. Availability and download instructions will be added here when these materials are ready.
+
+## Repository contents
+
+- `Model.py`: model wrapper and network interface.
+- `models/`: model and backbone implementations.
+- `dataloader.py`: RGB-IR data loading and preprocessing.
+- `train.py`: training and validation script.
+- `test.py`: saliency map inference script.
+- `eval.py`: saliency map evaluation script.
+- `mssim.py`: structural similarity loss implementation.
+- `flops.py`: model complexity utility.
+
+## Data organization
+
+The training and testing scripts expect each dataset split to contain aligned RGB images, thermal infrared images, and ground-truth masks:
+
+```text
+<dataset split>/
+├── RGB/
+├── T/
+└── GT/
+```
+
+Images are matched by filename. The scripts currently use `RGB/`, `T/`, and `GT/` subdirectories for both training and testing data.
+
+## Usage
+
+The scripts use PyTorch and expect a CUDA-capable GPU. Install PyTorch and the other required Python packages in your environment before running them.
+
+### Train
+
+```bash
+python train.py \
+  --train_root /path/to/dataset/train \
+  --val_root /path/to/dataset/test \
+  --save_path ./checkpoints/dataset/ \
+  --backbone resnet101d \
+  --pretrained_path /path/to/pretrained_backbone.pth
+```
+
+Optional arguments include `--epoch`, `--lr`, `--batchsize`, `--trainsize`, `--resume`, and `--start_epoch`. Run `python train.py --help` to see the defaults and available options.
+
+### Generate saliency maps
+
+```bash
+python test.py \
+  --test_dataset_path /path/to/dataset/test \
+  --pth_path /path/to/checkpoint.pth \
+  --save_path ./predictions/dataset/ \
+  --backbone resnet101d
+```
+
+### Evaluate
+
+`eval.py` computes S-measure, E-measure, F-measure, weighted F-measure, and MAE. Before running it, set the ground-truth directory and prediction directory in the script to match your local paths.
+
+## Citation
+
+Citation information will be added when the associated publication details are available.
+
+## License
+
+License information will be added with the public release.
