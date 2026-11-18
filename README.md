@@ -39,7 +39,7 @@ Images are matched by filename. The scripts currently use `RGB/`, `T/`, and `GT/
 
 ### Benchmark
 
-- [Download the benchmark]([BENCHMARK_LINK](https://drive.google.com/file/d/12pVGwz9lhpWOYo7bvIQ8YOkQQUNKhirT/view?usp=drive_link))
+- [Download the benchmark](https://drive.google.com/file/d/12pVGwz9lhpWOYo7bvIQ8YOkQQUNKhirT/view?usp=drive_link)
 
 ## Usage
 
@@ -62,8 +62,7 @@ Optional arguments include `--epoch`, `--lr`, `--batchsize`, `--trainsize`, `--r
 
 Download our ResNet-based model weights:
 
-- Dataset 1: [Download weights](DATASET_1_WEIGHTS_LINK)
-- Dataset 2: [Download weights](DATASET_2_WEIGHTS_LINK)
+- [Download weights](https://drive.google.com/drive/folders/1t7vDYRccp6mnC-fBcqA6AFJTjaXa7eaZ?usp=drive_link)
 
 ```bash
 python test.py \
@@ -79,8 +78,7 @@ python test.py \
 
 Our saliency maps are available here:
 
-- Dataset 1: [Download saliency maps](DATASET_1_SALIENCY_MAPS_LINK)
-- Dataset 2: [Download saliency maps](DATASET_2_SALIENCY_MAPS_LINK)
+- [Download saliency maps](https://drive.google.com/drive/folders/12l9hv_T_cU1G0md_v0c4n8vwgbNaBtUJ?usp=drive_link)
 
 ## Citation
 
